@@ -26,21 +26,21 @@ function getDecimal(x,x1){
 function getPosition(d,x1){
   var p = [];
   if (d == 0.75 || d == 0.5){
-    p[0]= x1*2;
+    p[0]= x1*2-1;
   }
   if (d == 0.25 || d == 0){
-    p[0] = x1*2;
-    p[1] = (x1+1)*2; 
+    p[0] = x1*2-1;
+    p[1] = (x1+1)*2-1; 
   }
   return p;
 }
 
 function getValue(p,arr){
   if(p.length == 1){
-    return (arr[p[0]])-1;
+    return (arr[p[0]]);
   }
   if(p.length == 2){
-    return ((arr[p[0]] + arr[p[1]])/2)-1;
+    return ((arr[p[0]] + arr[p[1]])/2);
   }
 }
 
